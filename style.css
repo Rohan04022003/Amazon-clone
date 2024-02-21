@@ -1,0 +1,521 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+}
+
+header{
+    height: 78px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 15px;
+}
+
+.logo {
+    width: 53px;
+    margin-left: 12px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.menu{
+    display: flex;
+    margin-left: -19px;
+}
+
+.menu > ul{
+    display: flex;
+    list-style: none;
+}
+
+.menu > ul > li {
+    padding: 10px 7px;
+    font-size: 0.9rem;
+    margin-right: 15px;
+    font-family: sans-serif;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+}
+
+/* dropdown for men */
+
+.dropdown {
+    position: absolute;
+    display: flex;
+    top: 78px;
+    left: 119px;
+    width: 1146px;
+    height: 449px;
+    z-index: 500;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease;
+    cursor: default;
+    
+}
+.menu ul :nth-child(1):hover .dropdown{
+    visibility: visible;
+    opacity: 1;
+}
+.menu > ul > :nth-child(1):hover{
+    border-bottom: 1.2px solid rgb(234, 90, 0);
+}
+
+.dropdown ul {
+    display: flex;
+    flex-direction: column;
+    color: rgb(86, 86, 86);
+    line-height: 25px;
+    font-family: sans-serif;
+    list-style: none;
+    margin-left: -40px;
+}
+.dropdown ul li{
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.dropdown ul li:hover{
+    font-weight: bold;
+}
+
+.dropdown > .topwear, .topwear2{
+    flex-basis: 20%;
+    padding: 10px 0px 10px 20px;
+}
+
+.dropdown .topwear{
+    background-color: white;
+}
+
+.dropdown .topwear2{
+    background-color: rgb(250, 250, 250);
+}
+
+.dropdown hr {
+    font-weight: 100;
+    width: 80%;
+    margin-right: 40px;
+    color: #a0a0a0;
+    outline: none;
+    
+}
+
+.men h3{
+    font-size: 15px;
+    color: rgb(234, 90, 0);
+}
+    /* ------------------------------------------------------------------------------------------ */
+    
+    
+    /* for women dropdown menu */
+    
+    .menu ul :nth-child(2):hover .dropdown{
+        visibility: visible;
+        opacity: 1;
+    }
+    .menu > ul > :nth-child(2):hover{
+        border-bottom: 1.2px solid rgb(238, 0, 171);
+    }
+    .women h3{
+        font-size: 15px;
+        color: rgb(238, 0, 171);
+    }
+
+    /* ------------------------------------------------------------------------------------------ */
+    
+    
+    /* for kids dropdown menu */
+    
+    .menu ul :nth-child(3):hover .dropdown{
+        visibility: visible;
+        opacity: 1;
+    }
+    .menu > ul > :nth-child(3):hover{
+        border-bottom: 1.2px solid rgb(127, 27, 127);
+    }
+    .kids h3{
+        font-size: 15px;
+        color: rgb(127, 27, 127);
+    }
+
+    /* ------------------------------------------------------------------------------------------ */
+    
+    
+    /* for home & living dropdown menu */
+    
+    .menu ul :nth-child(4):hover .dropdown{
+        visibility: visible;
+        opacity: 1;
+    }
+    .menu > ul > :nth-child(4):hover{
+        border-bottom: 1.2px solid rgb(209, 177, 14);
+    }
+    .home-living h3{
+        font-size: 15px;
+        color: rgb(209, 177, 14);
+    }
+
+    /* ------------------------------------------------------------------------------------------ */
+    
+    
+    /* for beauty dropdown menu */
+    
+    .menu ul :nth-child(5):hover .dropdown{
+        visibility: visible;
+        opacity: 1;
+    }
+    .menu > ul > :nth-child(5):hover{
+        border-bottom: 1.2px solid rgb(0, 167, 147);
+    }
+    .beauty h3{
+        font-size: 15px;
+        color: rgb(0, 167, 147);
+    }
+
+/* --------------------------------------------------- */
+
+    /* for studio dropdown menu */
+    
+    .menu .studio {
+        padding: 10px;
+        position: absolute;
+        top: 78px;
+        right: 642px;
+        text-align: center;
+        width: 500px;
+        height: 420px;
+        background-color: white;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        font-family: sans-serif;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.4s ease;
+        cursor:default;
+    }
+
+    .menu > ul :nth-child(6):hover .studio{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu > ul > :nth-child(6):hover{
+        border-bottom: 1px solid red;
+    }
+    .studio p{
+        color: rgb(86, 86, 86);
+    }
+
+    .studio .studio1{
+        width: 134px;
+        margin-top: 4px;
+    }
+    .studio .studio2 {
+        width: 97%;
+    }
+
+    #studio-btn {
+        padding: 10px 20px;
+        background-color: transparent;
+        border:1px solid grey;
+        font-weight: bold;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+
+/* --------------------------------------------------- */
+
+.menu sup{
+    font-size: 9px;
+    margin-left: 4px;
+    font-weight: bold;
+    color: rgb(255, 53, 53);
+}
+
+header input{
+    width: 457px;
+    padding: 12px 10px;
+    border: none;
+    outline: none;
+    letter-spacing: 1px;
+    background-color: rgb(242, 242, 242);
+    border-radius: 0px 4px 4px 0px;
+}
+
+.search .btn{
+    padding: 12px;
+    margin: 0 -5px;
+    border: none;
+    outline: none;
+    background-color: rgb(242, 242, 242);
+    border-radius: 4px 0px 0px 4px;
+    cursor: pointer;
+}
+
+.btn i{
+    color: rgb(114, 113, 113);
+}
+
+.header-icon{
+    display: flex;
+}
+
+.header-icon > div {
+    margin: 0 15px;
+    text-align: center;
+    line-height: 0px;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+}
+
+.header-icon .profile:hover{
+    border-bottom: 1px solid rgb(251, 18, 92);
+}
+
+.header-icon div p {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.login {
+    position: absolute;
+    z-index: 500;
+    right: 2.4rem;
+    top: 78px;
+    background-color: rgb(255, 255, 255);
+    width: 269px;
+    height: 394px;
+    padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease;
+}
+
+.profile:hover .login{
+    visibility: visible;
+    opacity: 1;
+
+}
+
+.login ul {
+    color: rgb(86, 86, 86);
+    line-height: 25px;
+    font-family: sans-serif;
+    list-style: none;
+    font-size: 14px;
+    margin-left: -37px;
+}
+
+.login ul li:hover{
+    font-weight: bold;
+}
+
+.login span{
+    font-size: 10px;
+    padding: 1px 2px 2px 2px;
+    color: white;
+    background-color: rgb(251, 18, 92);
+    border-radius: 5px 0 5px 0;
+    text-align: center;
+}
+.login h3{
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.login p{
+    color: #555555;
+}
+
+#login-signup{
+    margin-top: 5px;
+    background: transparent;
+    border-radius: 2px;
+    border: 0.5px solid rgb(214, 214, 214);
+    padding: 10px 20px;
+    font-weight: bold;
+    color: rgb(251, 18, 92);
+    cursor: pointer;
+}
+
+#login-signup:hover{
+    border: 1px solid rgb(251, 18, 92);
+    transition: .4 ease;
+}
+
+
+/* First Page */
+
+.first-page .img1{
+    margin-top: 3%;
+}
+
+.first-page .img1 img{
+    width: 94%;
+    cursor: pointer;
+}
+
+
+ /* for MEDAL WORTHY BRANDS TO BAG */
+
+.brands{
+    margin-top: 7%;
+}
+
+.brands h2{
+    margin-left: 30px;
+    margin-bottom: 3%;
+    color: rgb(88, 88, 88);
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+}
+
+.brand-img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.brand-img img{
+    margin: 20px 0;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+
+}
+
+.brand-img img:hover{
+    transition: 0.5s all ease;
+    scale: 1.01;
+}
+
+/* for rakshabandhan section */
+
+.first-page > .brands > .brands img{
+    flex-wrap: wrap;
+    width: 315px;
+}
+
+
+/* for offer sale */
+
+.first-page .offer-sale h2{
+    margin-top: 4%;
+    margin-left: 36px;
+    margin-bottom: 3%;
+    color: rgb(88, 88, 88);
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+}
+
+.first-page .offer-sale .category{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 15px;
+}
+
+.first-page .offer-sale .category img{
+    margin: 20px 0;
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.first-page .offer-sale .category img:hover{
+    transition: 0.5s all ease;
+    scale: 1.005;
+}
+
+footer{
+    width: 100%;
+    background-color: #f9faff;
+}
+
+.footer{
+    padding: 20px 200px;
+    display: flex;
+}
+
+.footer div{
+    margin-right: 60px;
+}
+
+.footer div h3{
+    font-family: sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    margin-bottom: 20px;
+}
+
+.footer div ul{
+    list-style: none;
+}
+
+.footer div ul li{
+    line-height: 25px;
+    color: #616161;
+    font-family: sans-serif;
+    margin-left: -38px;
+    cursor: pointer;
+}
+
+.footer div .social-icon i{
+    width: 30px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.footer .original div{
+    display: flex;
+    font-family: sans-serif;
+}
+
+.footer .original div span{
+    font-weight: bold;
+    color: black !important;
+}
+
+.footer .original div p{
+    color: #616161;
+}
+
+.footer .original div i{
+    font-size: 30px;
+    padding: 17px 10px;
+    color: #616161;
+}
+
+.copyright{
+    display: flex;
+    justify-content: space-between;
+    margin: -20px 200px 0px 200px;
+    padding-bottom: 10px;
+}
+
+.copyright p{
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #616161;
+}
+
+.copyright span{
+    color: rgb(0, 0, 228) !important;
+    font-weight: bold;
+    cursor: pointer;
+}
